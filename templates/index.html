@@ -1,0 +1,58 @@
+{{ define "extra-head" }}
+<style>
+#search-results .row {
+  margin-bottom: 15px;
+}
+.business {
+  font-weight: bolder;
+}
+.description {
+  font-style: italic;
+}
+</style>
+{{ end }}
+
+{{ define "content" }}
+
+<h1>Nightlife app</h1>
+
+<div>
+  <form action="/" method="get" class="form-inline">
+    <input type="text" class="form-control" name="location" placeholder="Where you at ?" value="{{ .location }}" />
+    <button type="submit" class="btn btn-primary">Search</button>
+    {{ if .user.TwitterID }}
+      <a href="/logout?location={{ .location }}" class="btn btn-default">Logout</a>
+    {{ else }}
+      <a href="/auth/twitter?location={{ .location }}" class="btn btn-default"><i class="fa fa-twitter"></i> Login with twitter</a>
+    {{ end }}
+  </form>
+</div>
+
+<div id="search-results">
+{{ range .businesses }}
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="{{ .yb.ImageURL }}" alt="" />
+    </div>
+    <div class="col-sm-10 infos">
+      <span class="business">{{ .yb.Name }}</span>
+      <p class="description">{{ .yb.SnippetText }}</p>
+      <form action="/going" method="post">
+        <input type="hidden" name="business_id" value="{{ .yb.ID }}" />
+        <input type="hidden" name="location" value="{{ $.location }}" />
+        <button type="submit" class="btn {{ if not $.user.TwitterID }} disabled{{ end }} {{ if .you_going }} btn-success{{ else }} btn-default{{ end }}">
+          {{ if .going }}
+            {{ .going }}
+          {{ else }}
+            0
+          {{ end }}
+          Going
+        </button>
+      </form>
+    </div>
+  </div>
+{{ end }}
+</div>
+
+
+{{ end }}

@@ -1,0 +1,148 @@
+{
+	"ImportPath": "github.com/alaingilbert/fcc-nightlife",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v78",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/JustinBeckwith/go-yelp/yelp",
+			"Rev": "2228f91f3d151c1cd01f8e916b5cc89741b6ac92"
+		},
+		{
+			"ImportPath": "github.com/JustinBeckwith/oauth",
+			"Rev": "a1577bd3870218dc30725a7cf4655e9917e3751b"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "1c83b3eabd45b6d76072b66b746c20815fb2872d"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.3.0-1-g94e7d24",
+			"Rev": "94e7d24fd285520f3d12ae998f7fdd6b5393d453"
+		},
+		{
+			"ImportPath": "github.com/gorilla/securecookie",
+			"Comment": "v1.1-5-gfa5329f",
+			"Rev": "fa5329f913702981df43dcb2a380bac429c810b5"
+		},
+		{
+			"ImportPath": "github.com/gorilla/sessions",
+			"Comment": "v1.1-2-g83c8db3",
+			"Rev": "83c8db3bdc9be789e57e3756ffbcffd2d7d40176"
+		},
+		{
+			"ImportPath": "github.com/guregu/null",
+			"Comment": "v3.1",
+			"Rev": "41961cea0328defc5f95c1c473f89ebf0d1813f6"
+		},
+		{
+			"ImportPath": "github.com/labstack/echo",
+			"Comment": "v3.0.3-72-gc7c4395",
+			"Rev": "c7c4395fbdf085a1d76443e2b66dc94aeba7947c"
+		},
+		{
+			"ImportPath": "github.com/labstack/gommon/color",
+			"Comment": "v0.1.0-11-gf72d3c8",
+			"Rev": "f72d3c883f8ea180da8f085dd320804c41332ad1"
+		},
+		{
+			"ImportPath": "github.com/labstack/gommon/log",
+			"Comment": "v0.1.0-11-gf72d3c8",
+			"Rev": "f72d3c883f8ea180da8f085dd320804c41332ad1"
+		},
+		{
+			"ImportPath": "github.com/markbates/goth",
+			"Rev": "182d9f715ed3b57c97f86d231ce7b1a0f923cf1a"
+		},
+		{
+			"ImportPath": "github.com/markbates/goth/gothic",
+			"Rev": "182d9f715ed3b57c97f86d231ce7b1a0f923cf1a"
+		},
+		{
+			"ImportPath": "github.com/markbates/goth/providers/twitter",
+			"Rev": "182d9f715ed3b57c97f86d231ce7b1a0f923cf1a"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-colorable",
+			"Comment": "v0.0.6-9-gd228849",
+			"Rev": "d228849504861217f796da67fae4f6e347643f15"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-isatty",
+			"Rev": "281032e84ae07510239465db46bf442aa44b953a"
+		},
+		{
+			"ImportPath": "github.com/mrjones/oauth",
+			"Rev": "89bb934da0f449a17815e4f465c2daec67b547c8"
+		},
+		{
+			"ImportPath": "github.com/urfave/cli",
+			"Comment": "v1.18.0-67-gd53eb99",
+			"Rev": "d53eb991652b1d438abdd34ce4bfa3ef1539108e"
+		},
+		{
+			"ImportPath": "github.com/valyala/bytebufferpool",
+			"Rev": "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7"
+		},
+		{
+			"ImportPath": "github.com/valyala/fasttemplate",
+			"Rev": "d090d65668a286d9a180d43a19dfdc5dcad8fe88"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/acme",
+			"Rev": "dc137beb6cce2043eb6b5f223ab8bf51c32459f4"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/acme/autocert",
+			"Rev": "dc137beb6cce2043eb6b5f223ab8bf51c32459f4"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "61557ac0112b576429a0df080e1c2cef5dfbb642"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context/ctxhttp",
+			"Rev": "61557ac0112b576429a0df080e1c2cef5dfbb642"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2",
+			"Rev": "b9780ec78894ab900c062d58ee3076cd9b2a4501"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2/internal",
+			"Rev": "b9780ec78894ab900c062d58ee3076cd9b2a4501"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "e24f485414aeafb646f6fca458b0bf869c0880a1"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2",
+			"Comment": "r2016.08.01-5-g3f83fa5",
+			"Rev": "3f83fa5005286a7fe593b055f0d7771a7dce4655"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/bson",
+			"Comment": "r2016.08.01-5-g3f83fa5",
+			"Rev": "3f83fa5005286a7fe593b055f0d7771a7dce4655"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/json",
+			"Comment": "r2016.08.01-5-g3f83fa5",
+			"Rev": "3f83fa5005286a7fe593b055f0d7771a7dce4655"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/sasl",
+			"Comment": "r2016.08.01-5-g3f83fa5",
+			"Rev": "3f83fa5005286a7fe593b055f0d7771a7dce4655"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/scram",
+			"Comment": "r2016.08.01-5-g3f83fa5",
+			"Rev": "3f83fa5005286a7fe593b055f0d7771a7dce4655"
+		}
+	]
+}
