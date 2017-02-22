@@ -284,6 +284,19 @@ func ensureIndex() {
 	}
 }
 
+// IsAuthMiddleware will ensure user is authenticated.
+// - Find user from context
+// - If user is empty, redirect to home
+func IsAuthMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
+	return func(c echo.Context) error {
+		user := c.Get("user").(User)
+		if user.TwitterID == "" {
+			return c.Redirect(302, "/")
+		}
+		return next(c)
+	}
+}
+
 // SetUserMiddleware Get user and put it into echo context.
 // - Get auth-token from cookie
 // - If exists, get user from database
@@ -346,7 +359,10 @@ func start(c *cli.Context) error {
 	e.GET("/auth/twitter", authTwitterHandler)
 	e.GET("/auth/twitter/callback", authTwitterCallbackHandler)
 	e.GET("/logout", logoutHandler)
-	e.POST("/going", goingHandler)
+
+	needAuthGroup := e.Group("")
+	needAuthGroup.Use(IsAuthMiddleware)
+	needAuthGroup.POST("/going", goingHandler)
 	port := c.Int("port")
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%d", port)))
 

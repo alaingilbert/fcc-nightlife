@@ -40,7 +40,7 @@
       <form action="/going" method="post">
         <input type="hidden" name="business_id" value="{{ .yb.ID }}" />
         <input type="hidden" name="location" value="{{ $.location }}" />
-        <button type="submit" class="btn {{ if not $.user.TwitterID }} disabled{{ end }} {{ if .you_going }} btn-success{{ else }} btn-default{{ end }}">
+        <button type="{{ if $.user.TwitterID }}submit{{ else }}button{{ end }}" class="btn {{ if not $.user.TwitterID }} disabled{{ end }} {{ if .you_going }} btn-success{{ else }} btn-default{{ end }}">
           {{ if .going }}
             {{ .going }}
           {{ else }}
